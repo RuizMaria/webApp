@@ -47,7 +47,7 @@ function Productos() {
     
 
 
-    anadir = () =>{
+/*     anadir = () =>{
         this.State({
             Input:[{input: this.state.Input[0].input+1}]
         })
@@ -57,7 +57,7 @@ function Productos() {
         this.State({
             Input:[{input: this.state.Input[0].input+1}]
         })
-    }
+    } */
      
     return (
         <>
@@ -76,11 +76,11 @@ function Productos() {
             ))}
 
         <h2>CARRITO</h2>
-            <Input 
+           {/*   <Input 
              input={this.state.Input[0].input}
              click={()=> this.anadir}
              click={()=> this.quitar}
-            />
+            />  */}
 
         </>
     )
