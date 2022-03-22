@@ -2,22 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import Producto from './Producto';
-import Input from './carrito/Input';
-
-
-/* class Productos_master extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            Input:[{input:0},
-            ],
-            otherState: 'otro'
-        }
-    }
-
-
-}
- */
 
 function Productos() {
 
@@ -45,19 +29,6 @@ function Productos() {
             });
      }, [])
     
-
-
-/*     anadir = () =>{
-        this.State({
-            Input:[{input: this.state.Input[0].input+1}]
-        })
-    }
-
-    quitar = () =>{
-        this.State({
-            Input:[{input: this.state.Input[0].input+1}]
-        })
-    } */
      
     return (
         <>
@@ -72,15 +43,11 @@ function Productos() {
                     precio={elemento.precio}
                     grupo={elemento.grupo}
                     portada={elemento.portada}
+                    
                 />
             ))}
 
         <h2>CARRITO</h2>
-           {/*   <Input 
-             input={this.state.Input[0].input}
-             click={()=> this.anadir}
-             click={()=> this.quitar}
-            />  */}
 
         </>
     )

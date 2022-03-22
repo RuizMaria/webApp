@@ -2,6 +2,8 @@ import './Producto.css';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import React from 'react';
+import PropTypes from 'prop-types';
+import Input from './carrito/Input';
 
 
 // function Producto(props) {
@@ -9,14 +11,9 @@ class Producto extends React.Component{
 
     constructor(props){
         super(props);
-        const nombre = props.nombre;
-        const precio = props.precio;
-        const grupo= props.grupo;
-        const portada = props.portada;  
         this.state = {
             Input:[{input:0},
-            ],
-            otherState: 'otro'
+            ]
         }
 
     }
@@ -38,21 +35,36 @@ class Producto extends React.Component{
     return (
         <div className='producto'>
             <div className='producto__descripcion'>
-                <Image src={this.portada} style={{ maxWidth: '10rem' }}/>
+                <Image src={this.props.portada} style={{ maxWidth: '10rem' }}/>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{this.nombre}</li>
-                    <li class="list-group-item">{this.grupo}</li>
-                    <li class="list-group-item">{this.precio} €</li>
+                    <li class="list-group-item">{this.props.nombre}</li>
+                    <li class="list-group-item">{this.props.grupo}</li>
+                    <li class="list-group-item">{this.props.precio} €</li>
                 </ul>
             </div>
             <div className='producto_boton'>
                 <Button class='btn btn-primary btn-lg' onClick={()=> this.quitar()}>-</Button>
-
+                <Input 
+                input={this.state.Input[0].input}
+                click={()=> this.anadir}
+                click={()=> this.quitar}
+                /> 
+                
                 <Button class='btn btn-primary btn-lg'onClick={()=> this.anadir()}>+</Button>
             </div>    
         </div>
     );
     }
+}
+
+Producto.propTypes = {
+
+    nombre: PropTypes.string,
+    precio: PropTypes.number,
+    grupo: PropTypes.string,
+    portada: PropTypes.string
+
+
 }
 
 export default Producto;
