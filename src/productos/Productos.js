@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import './Productos.css';
 import Producto from './Producto';
+import Pedido from './carrito/Pedido';
 
 function Productos() {
 
     const [productos,setProductos] = useState([]);
+    
     
     useEffect(() => {
             //console.log('Se monta Productos');
@@ -45,9 +48,22 @@ function Productos() {
                     portada={elemento.portada}
                     
                 />
+                
+                    
             ))}
 
-        <h2>CARRITO</h2>
+            console.log({Producto.props})
+        <div className='pedido'>
+            <h2>TOTAL PEDIDO: </h2>
+            <p> resultado: 
+         {/*    {productos.map((elemento) =>(
+               Producto(this.state.Input[0].input)
+
+            ))}  */}
+            </p>
+                {/* {Pedido(this.state.Preciot[0].preciot)} */}
+        </div>
+        
 
         </>
     )
