@@ -8,6 +8,7 @@ import Pedido from './carrito/Pedido';
 function Productos() {
 
     const [productos,setProductos] = useState([]);
+
     
     
     useEffect(() => {
@@ -39,34 +40,40 @@ function Productos() {
         <h2 className='titulo' >LISTA DE PRODUCTOS:</h2>
         
             {productos.map((elemento) => (
+                <> 
                 <Producto
                     key={elemento.id}
                     id={elemento.id}
                     nombre={elemento.nombre}
                     precio={elemento.precio}
                     grupo={elemento.grupo}
-                    portada={elemento.portada}
-                    
-                />
-                
-                    
+                    portada={elemento.portada}  
+                />  
+                <p>HOLA: {Producto.state}</p>
+                </>
             ))}
 
-            console.log({Producto.props})
-        <div className='pedido'>
+            
+
+        
+
+         <div className='pedido'>
             <h2>TOTAL PEDIDO: </h2>
-            <p> resultado: 
-         {/*    {productos.map((elemento) =>(
+    {/*   <p> resultado: 
+           {productos.map((elemento) =>(
                Producto(this.state.Input[0].input)
 
-            ))}  */}
+            ))}  
             </p>
-                {/* {Pedido(this.state.Preciot[0].preciot)} */}
-        </div>
+               {Pedido(this.state.Preciot[0].preciot)} */}
+        </div> 
         
 
         </>
+        
     )
+
+    
 }
     
 

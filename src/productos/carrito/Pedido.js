@@ -2,13 +2,6 @@ import React from 'react';
 
 class Pedido extends React.Component{
 
-    constructor(props){
-        super(props);
-        this.state = {
-            Preciot:[{preciot: this.props.preciot}]
-        }
-
-    }
 
     render(){
         return(

@@ -12,6 +12,8 @@ class Producto extends React.Component{
     constructor(props){
         
         super(props);
+
+        const prueba = 38; 
         this.state = {
             Input:[{input:0,preciot:0}]
         }
@@ -36,6 +38,8 @@ class Producto extends React.Component{
     render(){
         
     return (
+
+    <>
         <div className='producto'>
             <div className='producto__descripcion'>
                 <Image src={this.props.portada} style={{ maxWidth: '10rem' }}/>
@@ -62,6 +66,8 @@ class Producto extends React.Component{
             </div> 
         </div>
 
+       
+    </>
     );
     }
 }
