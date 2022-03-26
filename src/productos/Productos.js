@@ -8,8 +8,6 @@ import Pedido from './carrito/Pedido';
 function Productos() {
 
     const [productos,setProductos] = useState([]);
-
-    
     
     useEffect(() => {
             //console.log('Se monta Productos');
@@ -48,17 +46,14 @@ function Productos() {
                     precio={elemento.precio}
                     grupo={elemento.grupo}
                     portada={elemento.portada}  
+
                 />  
-                <p>HOLA: {Producto.state}</p>
                 </>
             ))}
 
-            
-
-        
-
          <div className='pedido'>
             <h2>TOTAL PEDIDO: </h2>
+            
     {/*   <p> resultado: 
            {productos.map((elemento) =>(
                Producto(this.state.Input[0].input)
@@ -70,8 +65,10 @@ function Productos() {
         
 
         </>
-        
+    
     )
+
+    
 
     
 }
