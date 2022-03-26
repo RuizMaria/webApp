@@ -5,6 +5,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Input from './carrito/Input';
 import Pedido from './carrito/Pedido';
+import Carrito from './carrito/Carrito';
 
 
 class Producto extends React.Component{
@@ -12,13 +13,16 @@ class Producto extends React.Component{
     constructor(props){
         
         super(props);
-
         const prueba = 38; 
         this.state = {
             Input:[{input:0,preciot:0}]
         }
+
+        /* console.log(this.state) */
         
     }
+
+    
 
     anadir = () =>{
         this.setState({
@@ -63,11 +67,17 @@ class Producto extends React.Component{
                 <Pedido 
                     preciot={this.state.Input[0].preciot}
                 /> 
+
+                {/* <Carrito
+                   preciot={this.state.Input[0].preciot}
+                /> */}
             </div> 
         </div>
 
        
     </>
+
+
     );
     }
 }

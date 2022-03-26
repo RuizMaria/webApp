@@ -12,12 +12,20 @@ function App() {
     <>
     <Container className = 'App'> 
       <Header />
+      
+      <div>
+        
+        
+      </div>
       <Routes>
         
         <Route path ="/" element = {<Productos />} />
+        
         <Route path ="/Pedidos" element={<Pedidos />}/>
         
       </Routes>  
+    
+
      </Container> 
 
     </>
