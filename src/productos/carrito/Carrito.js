@@ -1,23 +1,16 @@
-/* import React from 'react';
+import { useParams } from 'react-router-dom';
 
 
-class Carrito extends React.Component(){
+function Carrito () {
 
-state = {total: 0}
+    let params = useParams(); 
 
-componentDidMount(){
-    this.state.total = this.state.total + 8
+    return(
+        <p>ESTE ES EL CARRITO</p>
+    )
+
+
     
 }
 
-   render(){
-       return(
-
-            <p>Total a pagar:0 </p>
-
-       )
-   }
-}
-
-
-export default Carrito */
+export default Carrito; 

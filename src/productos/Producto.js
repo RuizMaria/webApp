@@ -5,7 +5,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Input from './carrito/Input';
 import Pedido from './carrito/Pedido';
-import Carrito from './carrito/Carrito';
+
 
 
 class Producto extends React.Component{
@@ -13,31 +13,29 @@ class Producto extends React.Component{
     constructor(props){
         
         super(props);
-        const prueba = 38; 
         this.state = {
             Input:[{input:0,preciot:0}]
         }
-
         /* console.log(this.state) */
         
     }
-
-    
 
     anadir = () =>{
         this.setState({
             Input:[{input: this.state.Input[0].input+1,preciot: (this.state.Input[0].input+1) * this.props.precio }]
         })
+        this.props.actualiza(this.props.precio)
     }
 
     quitar = () =>{
         if (this.state.Input[0].input>=1) {
             this.setState({
                 Input:[{input: this.state.Input[0].input-1,preciot: (this.state.Input[0].input-1)*(this.props.precio)}]
-            })   
+            })  
+            this.props.actualiza(-1*this.props.precio) 
         }
+        
     }
-
 
     render(){
         
@@ -54,7 +52,7 @@ class Producto extends React.Component{
                 </ul>
             </div>
             <div className='producto_boton'>
-                <Button className='btn btn-primary btn-lg' onClick={()=> this.quitar()}>-</Button>
+                <Button className='btn btn-primary btn-lg' onClick={()=> this.quitar()} >-</Button>
                 <Input 
                 input={this.state.Input[0].input}
                 click={()=> this.anadir}
@@ -67,10 +65,6 @@ class Producto extends React.Component{
                 <Pedido 
                     preciot={this.state.Input[0].preciot}
                 /> 
-
-                {/* <Carrito
-                   preciot={this.state.Input[0].preciot}
-                /> */}
             </div> 
         </div>
 

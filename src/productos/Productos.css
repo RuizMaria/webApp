@@ -15,7 +15,12 @@
     margin: 1rem 0;
     border-radius: 12px;
     background-color: #727272;
-    color: #ffffff
+    color: #ffffff;
 
+}
 
+.boton_pedido{
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #ffffff;
 }
