@@ -23,7 +23,7 @@ function App(props) {
         
         <Route path ="/" element = {<Productos />} />
         <Route path ="/Pedidos" element={<Pedidos />}/>
-        <Route path="/Carrito" element ={<Carrito/>}/>
+        <Route path="/Carrito" element ={<Carrito />}/>
         
       </Routes>  
     

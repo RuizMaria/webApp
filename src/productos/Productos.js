@@ -6,16 +6,36 @@ import {Link} from 'react-router-dom';
 import './Productos.css';
 import Producto from './Producto';
 
+//to={`/Carrito?unidades=${unidades}&nombre=${nombre}`}
+
 function Productos(props) {
 
+    const [productos,setProductos] = useState([]);
     const [total,setTotal] = useState(0); 
+    const [unidades, setUnidades] = useState(0); 
+    const [nombre, setNombre] = useState('no');
 
     const actualizar = (preciot) =>{
         
        setTotal( total+preciot) 
     }
 
-    const [productos,setProductos] = useState([]);
+    const conteo = (input,nombre) =>{
+
+        setUnidades(input)
+        setNombre(nombre)
+    }
+    
+    
+    
+  /*   const detalles = (productos) =>{
+        let arrayPeido = [];
+        {productos.map((elemento) => (
+
+        ))}
+
+    } */
+
     
     useEffect(() => {
             //console.log('Se monta Productos');
@@ -55,13 +75,14 @@ function Productos(props) {
                     grupo={elemento.grupo}
                     portada={elemento.portada}  
                     actualiza={actualizar}
+                    conteo={conteo}
                 />  
                 </>
             ))}
 
          <div className='pedido'>
             <h2>TOTAL PEDIDO: {total} €</h2>
-            <Button className = 'boton_pedido'><Link className = 'boton_pedido' to={'/Carrito'}>REALIZAR PEDIDO</Link></Button>
+            <Button className = 'boton_pedido' onClick ><Link className = 'boton_pedido' to='/Carrito' params={ {unidadesp:{unidades}} }>REALIZAR PEDIDO</Link></Button>
 
         </div> 
         
