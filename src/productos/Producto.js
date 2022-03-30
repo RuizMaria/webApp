@@ -25,7 +25,7 @@ class Producto extends React.Component{
             Input:[{input: this.state.Input[0].input+1,preciot: (this.state.Input[0].input+1) * this.props.precio }]
         })
         this.props.actualiza(this.props.precio)
-        this.props.conteo(this.state.Input[0].input+1,this.props.nombre)
+        this.props.conteo(this.state.Input[0].input+1,this.props.nombre,this.props.precio)
         
     }
 
@@ -35,7 +35,7 @@ class Producto extends React.Component{
                 Input:[{input: this.state.Input[0].input-1,preciot: (this.state.Input[0].input-1)*(this.props.precio)}]
             })  
             this.props.actualiza(-1*this.props.precio) 
-            this.props.conteo(this.state.Input[0].input-1,this.props.nombre)
+            this.props.conteo(this.state.Input[0].input-1,this.props.nombre,this.props.precio)
         }
         
     }
@@ -72,11 +72,7 @@ class Producto extends React.Component{
                 /> 
             </div> 
         </div>
-
-       
     </>
-
-
     );
     }
 }
