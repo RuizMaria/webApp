@@ -40,8 +40,6 @@ class Producto extends React.Component{
         
     }
 
-    
-
     render(){
         
     return (
