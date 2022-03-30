@@ -74,7 +74,7 @@ function App() {
       <Header />
       <Routes>
         
-        <Route path ="/" render = {() => <Productos/>} element={<Productos renderiza={renderiza} actualizar={actualizar} conteo={conteo} total={total} carrito={carrito}/>} />
+        <Route path ="/" element={<Productos renderiza={renderiza} actualizar={actualizar} conteo={conteo} total={total} carrito={carrito}/>} />
         <Route path ="/Pedidos" element={<Pedidos />}/>
         <Route path="/Carrito" element ={<Carrito lista={carrito} total={total} verifica={verifica}/>}/>
         <Route path="/Agradecimiento"element={<Agradecimiento/>}/>
