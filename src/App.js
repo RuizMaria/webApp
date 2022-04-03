@@ -17,8 +17,6 @@ function App() {
   const [total,setTotal] = useState(0); 
   const [carrito, setCarrito] = useState([]);
 
-  const [check,setCheck] = useState(0);
-
 
   const renderiza = (entra) =>{
 
@@ -29,12 +27,6 @@ function App() {
   const actualizar = (preciot) =>{
     setTotal( total+preciot); 
   }
-
-
- const verifica = (pedido) =>{
-      setCheck(pedido)  
- }
- 
 
  const conteo = (input,nombre,preciop) =>{
 
@@ -85,7 +77,7 @@ function App() {
         
         <Route path ="/" element={<Productos renderiza={renderiza} actualizar={actualizar} conteo={conteo} total={total} carrito={carrito}/>} />
         <Route path ="/Pedidos" element={<Pedidos />}/>
-        <Route path="/Carrito" element ={<Carrito lista={carrito} total={total} verifica={verifica}/>}/>
+        <Route path="/Carrito" element ={<Carrito lista={carrito} total={total} />}/>
         <Route path="/Agradecimiento"element={<Agradecimiento/>}/>
         
       </Routes>  

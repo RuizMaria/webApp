@@ -97,7 +97,8 @@ function Carrito (props) {
                                     <Form.Control required/>
                                     <Form.Text>Email al que desea que le enviemos la factura</Form.Text>
                                 </Form.Group>
-                                <Button type='submit' className = 'btn btn-success' onClick = {props.verifica(1)}>
+                                <Button type='submit' className = 'btn btn-success'>
+                                {/* <Button type='submit' className = 'btn btn-success' onClick = {props.verifica(1)}> */}
                                     REALIZAR PEDIDO    
                                 </Button>
                             </Form>

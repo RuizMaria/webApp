@@ -4,7 +4,7 @@ import Image from 'react-bootstrap/Image';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Input from './carrito/Input';
-import Pedido from './carrito/Pedido';
+import PedidoTotal from './carrito/PedidoTotal';
 
 
 
@@ -65,7 +65,7 @@ class Producto extends React.Component{
             </div>   
 
             <div>
-                <Pedido 
+                <PedidoTotal 
                     preciot={this.state.Input[0].preciot}
                 /> 
             </div> 
