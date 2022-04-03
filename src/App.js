@@ -17,8 +17,6 @@ function App() {
   const [total,setTotal] = useState(0); 
   const [carrito, setCarrito] = useState([]);
 
-  const [check,setCheck] = useState(0);
-
 
   const renderiza = (entra) =>{
 
