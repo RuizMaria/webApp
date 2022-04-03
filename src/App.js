@@ -17,6 +17,8 @@ function App() {
   const [total,setTotal] = useState(0); 
   const [carrito, setCarrito] = useState([]);
 
+  const [check,setCheck] = useState(0);
+
 
   const renderiza = (entra) =>{
 
@@ -58,10 +60,19 @@ function App() {
       
     });
     
-    console.log(cont);
+    //console.log(cont);
     if (cont === length) {
       setCarrito(carrito.concat(arrayCarrito));
     }
+    var index = 0;
+
+    carrito.forEach(elemento =>{
+      
+      if (elemento.unidades===0) {
+          carrito.splice(index,1)
+    }
+    index = index+1;
+    })
     
   }
 }
